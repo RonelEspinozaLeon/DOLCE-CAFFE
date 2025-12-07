@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolce Caffé - Cafetería de Especialidad</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <img src="imagenes/logo/logodolcecaffe.jpg" alt="Dolce Caffé Logo" class="logo">
+        <h1 class="title">Dolce Caffé</h1>
+        <p class="subtitle">Cafetería de especialidad en Huánuco ☕✨</p>
+        <div class="theme-toggle">
+            <i class="fas fa-sun"></i>
+            <label class="switch">
+            <input type="checkbox" id="themeSwitcher">
+            <span class="slider"></span>
+            </label>
+            <i class="fas fa-moon"></i>
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="container">
+
+        <!-- SOBRE NOSOTROS -->
+        <section class="card">
+            <h2>Sobre Nosotros</h2>
+            <p>
+                En Dolce Caffé creemos que cada café cuenta una historia. Somos una cafetería de especialidad
+                que busca ofrecer bebidas de alta calidad en un ambiente acogedor. Disfruta la mezcla perfecta 
+                de sabor, aroma y calidez en cada visita.
+            </p>
+        </section>
+
+        <!-- UBICACIÓN -->
+        <section class="card">
+            <h2>📍 Nuestros Locales</h2>
+
+            <div class="location-block">
+                <h3>📌 Sede Principal</h3>
+                <p><strong>Dirección:</strong> Jr. 28 de Julio #982, Huánuco, Perú</p>
+
+                <iframe 
+                    src="https://www.google.com/maps?q=Jr.+28+de+Julio+982,+Huánuco&output=embed" 
+                    width="100%" height="250"
+                    class="map"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <hr>
+
+            <div class="location-block">
+                <h3>📌 Sede Real Plaza</h3>
+                <p><strong>Dirección:</strong> Real Plaza Huánuco – 2do Piso</p>
+
+                <iframe 
+                    src="https://www.google.com/maps?q=Real+Plaza+Huánuco&output=embed"
+                    width="100%" height="250"
+                    class="map"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- HORARIOS -->
+        <section class="card">
+            <h2>🕒 Horarios de Atención</h2>
+            <p><strong>Sede Principal:</strong> 8:00 AM – 10:00 PM</p>
+            <p><strong>Real Plaza (2do Piso):</strong> 10:00 AM – 10:00 PM</p>
+        </section>
+
+        <!-- Galería -->
+        <section class="card">
+            <h2>🍽️ Nuestro Menú</h2>
+
+            <!-- Filtros por categoría -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="desayunos">Desayunos</button>
+                <button class="filter-btn" data-filter="combos">Combos</button>
+                <button class="filter-btn" data-filter="demas">Otros</button>
+            </div>
+
+            <div class="gallery">
+
+                <!-- DESAYUNOS -->
+                <div class="item desayunos"
+                    data-title="Desayuno Americano"
+                    data-desc="Tostadas, huevos, café pasado y jugo natural."
+                    data-img="imagenes/desayunos/desayuno americano.jpg">
+                    <img src="imagenes/desayunos/desayuno americano.jpg" alt="Desayuno Americano">
+                </div>
+
+                <div class="item desayunos"
+                    data-title="Desayuno Ejecutivo"
+                    data-desc="Pan artesanal, huevos revueltos y café latte."
+                    data-img="imagenes/desayunos/desayuno ejecutivo.jpg">
+                    <img src="imagenes/desayunos/desayuno ejecutivo.jpg" alt="Desayuno Ejecutivo">
+                </div>
+
+                <div class="item desayunos"
+                    data-title="Desayuno Continental"
+                    data-desc="Pan artesanal, huevos revueltos y café latte."
+                    data-img="imagenes/desayunos/desayuno continental.jpg">
+                    <img src="imagenes/desayunos/desayuno continental.jpg" alt="Desayuno Continental">
+                </div>
+
+                <!-- COMBOS -->
+                <div class="item combos"
+                    data-title="Combo Capuchino + 3 Leches"
+                    data-desc="Válido solo en la sede de Real Plaza"
+                    data-img="imagenes/combos/combo 1.jpg">
+                    <img src="imagenes/combos/combo 1.jpg" alt="Combo Capuchino + 3 Leches">
+                </div>
+
+                <div class="item combos"
+                    data-title="Combo Keke de naranja + Chocolate caliente"
+                    data-desc="Válido solo en la sede de Real Plaza"
+                    data-img="imagenes/combos/combo 2.jpg">
+                    <img src="imagenes/combos/combo 2.jpg" alt="Combo Keke de naranja + Chocolate caliente">
+                </div>
+                
+                <div class="item combos"
+                    data-title="Combo Keke de naranja + Cafe Americano"
+                    data-desc="Válido solo en la sede de Real Plaza"
+                    data-img="imagenes/combos/combo 3.jpg">
+                    <img src="imagenes/combos/combo 3.jpg" alt="Combo Keke de naranja + Cafe Americano">
+                </div>
+
+                <!-- demas / POSTRES -->
+                <div class="item demas"
+                    data-title="S"
+                    data-desc=""
+                    data-img="imagenes/demas/cafe.jpg">
+                    <img src="imagenes/demas/cafe.jpg" alt="S">
+                </div>
+
+                <div class="item demas"
+                    data-title="Frappé de Menta"
+                    data-desc="Nuestro Frappé de Menta es el toque perfecto para esos días en los que necesitas algo fresco y dulce
+                    ¡Ven por el tuyo y disfruta el lado más refrescante de Dolce Café!"
+                    data-img="imagenes/demas/Frappé de Menta.jpg">
+                    <img src="imagenes/demas/Frappé de Menta.jpg" alt="Frappé de Menta">
+                </div>
+                <div class="item demas"
+                    data-title="DOLCE TOWER"
+                    data-desc="Crujiente wafle intercalado con suaves y cremosas bolas de helado y coronadas con una generosa capa de crema Chantilly."
+                    data-img="imagenes/demas/DOLCE TOWER Crujiente wafle.jpg">
+                    <img src="imagenes/demas/DOLCE TOWER Crujiente wafle.jpg" alt="DOLCE TOWER">
+                </div>
+                <div class="item demas"
+                    data-title="Frappé Especial + Carrot Cake"
+                    data-desc="Porque cada momento merece un toque delicioso"
+                    data-img="imagenes/demas/Frappé Especial + Carrot Cake.jpg">
+                    <img src="imagenes/demas/Frappé Especial + Carrot Cake.jpg" alt="Frappé Especial + Carrot Cake">
+                </div>
+                <div class="item demas"
+                    data-title="Sándwich de Pollo con Durazno"
+                    data-desc="Una combinación irresistible de sabores: delicioso pollo deshilachado, trozos de durazno en su punto perfecto de dulzura y un toque especial de nuestra salsa secreta, todo dentro de un pan suave y doradito."
+                    data-img="imagenes/demas/Sándwich de Pollo con Durazno.jpg">
+                    <img src="imagenes/demas/Sándwich de Pollo con Durazno.jpg" alt="Sándwich de Pollo con Durazno">
+                </div>
+                <div class="item demas"
+                    data-title="Cheesecake de Arándanos"
+                    data-desc="Nuestro cheesecake de arándanos tiene la combinación perfecta de suavidad y sabor, con una base crujiente y el toque justo de dulzura, acompáñalo con tu café favorito y disfruta de un momento simplemente delicioso."
+                    data-img="imagenes/demas/Nuestro cheesecake  de arándanos.jpg">
+                    <img src="imagenes/demas/Nuestro cheesecake  de arándanos.jpg" alt="Nuestro cheesecake  de arándanos">
+                </div>
+                <div class="item demas"
+                    data-title="frappé de oreo"
+                    data-desc="¿Qué mejor manera de refrescar tu día que con un delicioso frappé de oreo? ✨ Cremoso, frío y con el toque perfecto de dulzura para hacer de cualquier momento algo especial."
+                    data-img="imagenes/demas/frappé de oreo.jpg">
+                    <img src="imagenes/demas/frappé de oreo.jpg" alt="frappé de oreo">
+                </div>
+                <div class="item demas"
+                    data-title="Latte Caramel"
+                    data-desc="Espuma cremosa, café intenso y ese toque de caramelo que derrite"
+                    data-img="imagenes/demas/sabe a Latte Caramel.jpg">
+                    <img src="imagenes/demas/sabe a Latte Caramel.jpg" alt="Latte Caramel">
+                </div>
+                <div class="item demas"
+                    data-title="CREPA+ HELADO"
+                    data-desc="¡No te quedes con las ganas!"
+                    data-img="imagenes/demas/CREPA+ HELADO.jpg">
+                    <img src="imagenes/demas/CREPA+ HELADO.jpg" alt="CREPA+ HELADO">
+                </div>
+                <div class="item demas"
+                    data-title="Croissants dulces y salados"
+                    data-desc="Disfruta nuestra edición especial de croissants dulces y salados, hechos con amor para celebrar a quién se merece todo."
+                    data-img="imagenes/demas/croissants dulces y salados.jpg">
+                    <img src="imagenes/demas/croissants dulces y salados.jpg" alt="croissants dulces y salados">
+                </div>
+                <div class="item demas"
+                    data-title="Moca"
+                    data-desc="Nuestro Moca une el sabor profundo del café con la dulzura sedosa del chocolate, cada sorbo es puro placer."
+                    data-img="imagenes/demas/Moca.jpg">
+                    <img src="imagenes/demas/Moca.jpg" alt="Moca">
+                </div>
+                <div class="item demas"
+                    data-title="Frappé bien frío"
+                    data-desc="¡Es momento de refrescarte con un frappé bien frío!"
+                    data-img="imagenes/demas/tarde caluroza frappé bien frío.jpg">
+                    <img src="imagenes/demas/tarde caluroza frappé bien frío.jpg" alt="Frappé bien frío">
+                </div>
+                <div class="item demas"
+                    data-title="Croissant crujiente  + Chocolate caliente"
+                    data-desc="☕🥐🤎
+                    ¡Date ese gustito hoy, te esperamos!
+                    Tarde calurosa... solución deliciosa"
+                    data-img="imagenes/demas/tarde caluroza Croissant crujiente  + chocolate caliente..jpg">
+                    <img src="imagenes/demas/tarde caluroza Croissant crujiente  + chocolate caliente..jpg" alt="Croissant crujiente  + Chocolate caliente">
+                </div>
+                <div class="item demas"
+                    data-title="keke"
+                    data-desc="✨Ligero, esponjoso y lleno de sabor a naranja. Así es nuestro keke, perfecto para endulzar tus momentos.
+                    ¡Disfrútalo con tu bebida favorita!"
+                    data-img="imagenes/demas/keke.jpg">
+                    <img src="imagenes/demas/keke.jpg" alt="keke">
+                </div>
+                <div class="item demas"
+                    data-title="waffle + helado"
+                    data-desc="Ese antojo no se va solo... se va con waffle.
+                    Y si es con helado, mejor.
+                    🤭🧇✨🤎 "
+                    data-img="imagenes/demas/waffle + helado.jpg">
+                    <img src="imagenes/demas/waffle + helado.jpg" alt="waffle + helado">
+                </div>
+                <div class="item demas"
+                    data-title="Torta de Chocolate"
+                    data-desc="Empieza tu semana engriéndote con el sabor intenso de nuestra torta de chocolate.✨"
+                    data-img="imagenes/demas/torta de chocolate.jpg">
+                    <img src="imagenes/demas/torta de chocolate.jpg" alt="Torta de Chocolate">
+                </div>
+                <div class="item demas"
+                    data-title="frappé"
+                    data-desc="✨Más que una bebida, un momento para ti, encuentra tu frappé favorito en cualquiera de nuestros dos locales."
+                    data-img="imagenes/demas/frappé.jpg">
+                    <img src="imagenes/demas/frappé.jpg" alt="frappé">
+                </div>
+                <div class="item demas"
+                    data-title="Rosquitas"
+                    data-desc="Suaves, doraditas y hechas para acompañar ese café que tanto disfrutas.
+En Dolce Caffe creemos que cada mordisco también puede ser un momento de pausa, de calma y de placer."
+                    data-img="imagenes/demas/rosquitas recién horneadas.jpg">
+                    <img src="imagenes/demas/rosquitas recién horneadas.jpg" alt="Rosquitas">
+                </div>
+                <div class="item demas"
+                    data-title="Postre"
+                    data-desc="✨ Los mejores momentos saben a crepé recién hecho, duraznos en su punto y helado cremoso.
+                    ¡Endulza tu día con esta deliciosa combinación!"
+                    data-img="imagenes/demas/postre 1.jpg">
+                    <img src="imagenes/demas/postre 1.jpg" alt="Postre">
+                </div>
+                <div class="item demas"
+                    data-title="Rollo de crepe"
+                    data-desc="Calientito, suave y lleno de sabor: Rollo de crepe de jamón y queso."
+                    data-img="imagenes/demas/Rollo de crepe.jpg">
+                    <img src="imagenes/demas/Rollo de crepe.jpg" alt="Rollo de crepe">
+                </div>
+
+            </div>
+        </section>
+
+       <!-- CONTACTO -->
+        <section class="card">
+            <h2>📞 Contacto</h2>
+            <p><strong>Teléfono:</strong> (062) 603047</p>
+        </section>
+
+        <!-- REDES SOCIALES MEJORADAS -->
+        <section class="card social-card">
+            <h2 class="social-title">🌐 Síguenos en Redes</h2>
+
+            <div class="social-container">
+                <a href="https://www.instagram.com/dolcecaffe.pe/" target="_blank" class="social-btn instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61555745618265" target="_blank" class="social-btn facebook">
+                    <i class="fab fa-facebook-square"></i> Facebook
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= MODAL ================= -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span id="closeModal" class="close">&times;</span>
+
+            <img id="modalImg" src="" alt="Producto">
+            
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+
+            <!-- Navegación dentro del modal -->
+            <div class="modal-nav">
+                <button id="prevBtn" class="nav-btn">⟨ Anterior</button>
+                <button id="nextBtn" class="nav-btn">Siguiente ⟩</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
