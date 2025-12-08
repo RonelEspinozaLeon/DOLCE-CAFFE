@@ -157,7 +157,8 @@ p {
 }
 
 /* Modal */
-.modal {
+/* === MODAL DE IMAGEN === */
+.image-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -168,6 +169,7 @@ p {
     background: rgba(0,0,0,0.7);
     justify-content: center;
     align-items: center;
+    z-index: 9000;
 }
 
 .modal-content {
@@ -196,6 +198,7 @@ p {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
 }
+
 .modal-nav {
     margin-top: 15px;
     display: flex;
@@ -218,6 +221,7 @@ p {
 .nav-btn:hover {
     background: #6d533d;
 }
+
 /* ---------------- Redes Sociales Mejoradas ---------------- */
 
 .social-card {
@@ -369,3 +373,167 @@ body.dark {
     background: #3b3b3b;
     color: #fff;
 }
+/* PAGINACIÓN MODERNA */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0 10px;
+}
+
+.page-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.page-btn:hover:not(:disabled) {
+    transform: scale(1.15);
+}
+
+/* NÚMEROS DE PÁGINA */
+.page-numbers {
+    display: flex;
+    gap: 8px;
+}
+
+.page-number {
+    padding: 7px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    transition: all 0.25s ease;
+    font-weight: 600;
+}
+
+.page-number:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.page-number.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+/* ================================
+   PALETA DE COLORES – DOLCE CAFFÉ
+   ================================ */
+:root {
+    /* COLOR PRINCIPAL (Botones, acentos, paginación activa) */
+    --accent: #d44f32;              /* Rojo café */
+    --accent-light: #e36a52;        /* Hover más claro */
+    --accent-dark: #b83624;         /* Estado activo */
+
+    /* COLORES DE FONDO (tarjetas, contenedores) */
+    --bg-main: #fdf8f4;             /* Crema suave general */
+    --card-bg: #f7eee7;             /* Tarjetas y cajas */
+    --card-bg-hover: #f3e4d9;       /* Hover sutil */
+
+    /* BORDES */
+    --border: #d8c2b0;              /* Café claro elegante */
+    --border-dark: #c1a088;
+
+    /* TEXTO */
+    --text-title: #3b2820;          /* Café oscuro */
+    --text-body: #5a4235;           /* Marrón suave */
+    --text-muted: #9b8579;
+
+    /* SOMBRAS */
+    --shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   MODO OSCURO
+   ================================ */
+body.dark {
+    --bg-main: #1d1b19;
+    --card-bg: #2a2623;
+    --card-bg-hover: #362f2b;
+
+    --border: #4b423d;
+    --border-dark: #635953;
+
+    --text-title: #f4e8dd;
+    --text-body: #d7c8b9;
+    --text-muted: #b2a69a;
+
+    --accent: #d08752;       /* Caramelo suave para oscuro */
+    --accent-light: #e6a974;
+    --accent-dark: #a76d38;
+}
+
+
+/* Miniaturas */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.video-thumb {
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: transform .3s ease;
+}
+
+.video-thumb:hover {
+    transform: scale(1.04);
+}
+
+.video-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==== MODAL DE VIDEO ==== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* IMPORTANTE: NO forces el tamaño del video */
+.video-modal {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Este es el truco: El video mantiene su tamaño natural */
+#videoPlayer {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+

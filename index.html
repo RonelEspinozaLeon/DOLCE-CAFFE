@@ -97,6 +97,13 @@
         <!-- Galería -->
         <section class="card">
             <h2>🍽️ Nuestro Menú</h2>
+            <div class="pagination">
+                <button id="prevPage" class="page-btn">⟨</button>
+
+                <div id="pageNumbers" class="page-numbers"></div>
+
+                <button id="nextPage" class="page-btn">⟩</button>
+            </div>
 
             <!-- Filtros por categoría -->
             <div class="filters">
@@ -285,6 +292,48 @@ En Dolce Caffe creemos que cada mordisco también puede ser un momento de pausa,
 
             </div>
         </section>
+        
+
+        <section class="card">
+        <h2>🎥 Nuestros Videos</h2>
+
+        <div class="video-gallery">
+
+            <div class="video-thumb" data-video="videos/dolce.mp4">
+                <video muted>
+                    <source src="videos/dolce.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-thumb" data-video="videos/realplaza.mp4">
+                <video muted>
+                    <source src="videos/realplaza.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-thumb" data-video="videos/local1.mp4">
+                <video muted>
+                    <source src="videos/local1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-thumb" data-video="videos/dolce2.mp4">
+                <video muted>
+                    <source src="videos/dolce2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-thumb" data-video="videos/dolce1.mp4">
+                <video muted>
+                    <source src="videos/dolce1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </section>
+
+
+
 
        <!-- CONTACTO -->
         <section class="card">
@@ -329,6 +378,19 @@ En Dolce Caffe creemos que cada mordisco también puede ser un momento de pausa,
 
         </div>
     </div>
+    <!-- ================= MODAL DE VIDEO ================= -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content video-modal">
+            <button id="prevVideo" class="nav-btn left">⟨ Anterior</button>
+            <button id="nextVideo" class="nav-btn right">Siguiente ⟩</button>
+            
+            <span id="closeVideoModal" class="close">&times;</span>
+
+            <video id="videoPlayer" controls autoplay></video>
+        </div>
+    </div>
+
+
 
 
     <!-- JS -->
